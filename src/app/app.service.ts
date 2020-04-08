@@ -10,8 +10,8 @@ export class AppService {
     pageInfo:any = new BehaviorSubject("normal");
     constructor(private http: HttpClient){}
     getToken() {
-        return this.http.get('http://127.0.0.1:8080/chat-token').subscribe(res => {
-            this.authChatWidget(res);
+        return this.http.post('http://localhost:8080/jwt/chat-token', {}).subscribe((res: any) => {
+            this.authChatWidget(res.token);
         });
     }
     updateStt(stt: boolean) {
