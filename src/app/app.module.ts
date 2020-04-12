@@ -5,16 +5,19 @@ import { HttpClientModule } from '@angular/common/http';
 import { OtcComponent } from './otc/otc.component';
 import { RouterModule, Routes } from '@angular/router';
 import { NormalComponent } from './normal/normal.component';
+import { LoginComponent } from './login/login.component';
 
 const appRoutes: Routes = [
-  { path: '', component: NormalComponent },
+  { path: 'login', component: LoginComponent },
+  { path: 'normal', component: NormalComponent },
   { path: 'otc', component: OtcComponent }
 ];
 @NgModule({
   declarations: [
     AppComponent,
     OtcComponent,
-    NormalComponent
+    NormalComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,

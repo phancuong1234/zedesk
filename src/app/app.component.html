@@ -1,1 +1,6 @@
+<button (click)="login()">login</button>
+<button (click)="logout()" *ngIf="isLoggined">logout</button>
+<button (click)="goToOTC()">OTC</button>
+<button (click)="goToExchange()">EXCHANGE</button>
+<button (click)="embed()">reload embed</button>
 <router-outlet></router-outlet>
